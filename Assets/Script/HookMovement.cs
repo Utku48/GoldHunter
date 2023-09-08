@@ -46,7 +46,7 @@ public class HookMovement : MonoBehaviour
     void Update()
     {
         Rotate();
-        GetInput();
+
         MoveRope();
     }
 
@@ -55,7 +55,7 @@ public class HookMovement : MonoBehaviour
     {
         if (!canRotate)
             return;
-
+        HookManager.isTook = false;
         if (rotate_Right)
         {
             rotate_Angle += rotate_Speed * Time.deltaTime;
@@ -79,16 +79,15 @@ public class HookMovement : MonoBehaviour
 
     }
 
-    void GetInput()
+    public void GetInput()
     {
-        if (Input.GetMouseButtonDown(0))
+
+        if (canRotate)
         {
-            if (canRotate)
-            {
-                canRotate = false;
-                moveDown = true;
-            }
+            canRotate = false;
+            moveDown = true;
         }
+
     }
 
     void MoveRope()

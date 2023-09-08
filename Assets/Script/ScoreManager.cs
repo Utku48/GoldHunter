@@ -5,10 +5,14 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    public TextMeshPro money_text;
-    public int score;
+    public TextMeshProUGUI money_text;
+    public TextMeshProUGUI bomb_text;
+
+    public static float money;
+    public static float bomb_Count;
     private void Update()
     {
-        money_text.text = "Money: " + score;
+        money_text.text = "Gold: " + money;
+        bomb_text.text = bomb_Count.ToString();
     }
 }

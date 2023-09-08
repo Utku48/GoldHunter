@@ -9,9 +9,10 @@ public class HookManager : MonoBehaviour
     [SerializeField] private GameObject hook;
     [SerializeField] private Transform holdPos;
 
+    public static GameObject hold_Obj;
     public static HookManager u { get; private set; }
 
-    public bool isTook = false;
+    public static bool isTook = false;
 
     private void Awake()
     {
@@ -28,21 +29,24 @@ public class HookManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("item") && isTook == false)
+        if (other.gameObject.CompareTag("item") && !isTook)
         {
-            if (other.gameObject.GetComponent<PrefabEnumController>().prefabWeight == EnumWeight.Weight.heavy)
+            hold_Obj = other.gameObject;
+
+            if (hold_Obj.GetComponent<PrefabEnumController>().prefabWeight == EnumWeight.Weight.heavy)
             {
                 HookMovement.u.move_speed = 0.75f;
             }
-            Transform itemTransform = other.transform;
-            itemTransform.SetParent(hook.transform, false);
 
-            itemTransform.localRotation = other.gameObject.transform.rotation;
-            itemTransform.localScale = Vector3.one;
+            Transform itemTransform = hold_Obj.transform;
+            itemTransform.localRotation = hold_Obj.transform.rotation;
+
+            itemTransform.SetParent(hook.transform);
 
             itemTransform.position = holdPos.position;
             isTook = true;
             HookMovement.u.moveDown = false;
         }
     }
+
 }

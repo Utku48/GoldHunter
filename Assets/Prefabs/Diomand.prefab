@@ -97,8 +97,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.3094852, y: 2.0725288, z: 1.842881}
-  m_Center: {x: -0.03798882, y: 0.060876407, z: -0.4808372}
+  m_Size: {x: 2.9160666, y: 2.0725288, z: 3.0950212}
+  m_Center: {x: 0.082820356, y: 0.06087641, z: -0.29437065}
 --- !u!54 &5408219894197994649
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,3 +128,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabWeight: 3
+  value: 10
