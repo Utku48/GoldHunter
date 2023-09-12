@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PrefabEnumController : MonoBehaviour
 {
+    public SpawnPosition spawnPosition;
+
     public EnumWeight.Weight prefabWeight;
     public float value;
+
+
 }

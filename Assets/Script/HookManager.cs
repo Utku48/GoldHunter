@@ -46,6 +46,8 @@ public class HookManager : MonoBehaviour
             itemTransform.position = holdPos.position;
             isTook = true;
             HookMovement.u.moveDown = false;
+
+            other.gameObject.GetComponent<PrefabEnumController>().spawnPosition.isEmpty = true;
         }
     }
 

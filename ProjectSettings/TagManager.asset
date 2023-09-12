@@ -6,6 +6,8 @@ TagManager:
   tags:
   - item
   - TookLine
+  - bullet
+  - Enemy_Wall
   layers:
   - Default
   - TransparentFX

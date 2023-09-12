@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
+using DG.Tweening;
 
 
-public class itemController : MonoBehaviour
+public class ItemController : MonoBehaviour
 {
     public GameObject[] diamonds;
     public GameObject[] stones;
     public GameObject[] golds;
 
-    public SpawnPosEnumController[] spawnPoints;
+    public SpawnPosition[] spawnPoints;
 
 
     private void Start()
@@ -17,13 +18,13 @@ public class itemController : MonoBehaviour
             switch (item.placeType)
             {
                 case Enumİtems.ItemPlacePositions.Gold:
-                    InstantiateRandomItem(golds, item.transform.position);
+                    InstantiateRandomItem(golds, item);
                     break;
                 case Enumİtems.ItemPlacePositions.Stone:
-                    InstantiateRandomItem(stones, item.transform.position);
+                    InstantiateRandomItem(stones, item);
                     break;
                 case Enumİtems.ItemPlacePositions.Diamond:
-                    InstantiateRandomItem(diamonds, item.transform.position);
+                    InstantiateRandomItem(diamonds, item);
                     break;
                 default:
                     break;
@@ -31,15 +32,49 @@ public class itemController : MonoBehaviour
 
         }
 
+        InvokeRepeating("ReInstantiate", 0f, 7f);
 
     }
-    private void InstantiateRandomItem(GameObject[] items, Vector3 position)
+    private void InstantiateRandomItem(GameObject[] items, SpawnPosition pos)
     {
         if (items.Length > 0)
         {
             int randomIndex = Random.Range(0, items.Length);
             GameObject itemToSpawn = items[randomIndex];
-            Instantiate(itemToSpawn, position, Quaternion.Euler(-90f, 0f, 0f));
+            GameObject instantiated_obj = Instantiate(itemToSpawn, pos.transform.position, Quaternion.Euler(-90f, 0f, 0f));
+
+            Vector3 newScale = instantiated_obj.transform.localScale + new Vector3(0.2f, 0.2f, 0.2f);
+            instantiated_obj.transform.DOScale(newScale, 1f);
+            pos.isEmpty = false;
+
+            instantiated_obj.GetComponent<PrefabEnumController>().spawnPosition = pos;
+        }
+    }
+
+
+    private void ReInstantiate()
+    {
+        foreach (var item in spawnPoints)
+        {
+            if (item.isEmpty)
+            {
+                switch (item.placeType)
+                {
+                    case Enumİtems.ItemPlacePositions.Gold:
+                        InstantiateRandomItem(golds, item);
+                        break;
+                    case Enumİtems.ItemPlacePositions.Stone:
+                        InstantiateRandomItem(stones, item);
+                        break;
+                    case Enumİtems.ItemPlacePositions.Diamond:
+                        InstantiateRandomItem(diamonds, item);
+                        break;
+                    default:
+                        break;
+                }
+                break;
+
+            }
 
         }
     }

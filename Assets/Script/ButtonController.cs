@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class ButtonController : MonoBehaviour
 {
+    public GameObject secret_Button;
 
+    public GameObject panel;
+    private bool isPanelOpen = false;
     public void On_Click_Explode()
     {
         if (ScoreManager.bomb_Count > 0)
@@ -23,5 +26,31 @@ public class ButtonController : MonoBehaviour
             ScoreManager.bomb_Count++;
             ScoreManager.money -= 10;
         }
+    }
+
+    public void PanelController()
+    {
+        isPanelOpen = !isPanelOpen;
+        panel.SetActive(isPanelOpen);
+
+        if (panel.activeSelf)
+        {
+            secret_Button.SetActive(false);
+        }
+        else
+        {
+            secret_Button.SetActive(true);
+        }
+    }
+
+    public void Player_Count()
+    {
+        if (ScoreManager.money >= 10)
+        {
+            ScoreManager.player_Count++;
+            ScoreManager.money -= 10;
+
+        }
+
     }
 }
