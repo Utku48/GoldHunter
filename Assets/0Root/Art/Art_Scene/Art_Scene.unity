@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeType: 0
+  isEmpty: 1
 --- !u!1 &4571926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,14 +1274,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.10023741, y: -0, z: -0, w: 0.9949635}
-  m_LocalPosition: {x: 0, y: 3.28, z: 0.36}
+  m_LocalRotation: {x: 0.13745078, y: -0, z: -0, w: 0.9905087}
+  m_LocalPosition: {x: 0, y: 3.15, z: 0.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 11.506, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15.801, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1474,6 +1475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeType: 2
+  isEmpty: 1
 --- !u!1 &565644262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,6 +1552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeType: 2
+  isEmpty: 1
 --- !u!1 &664187039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1980,6 +1983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeType: 0
+  isEmpty: 1
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,6 +2175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeType: 1
+  isEmpty: 1
 --- !u!1 &951883990
 GameObject:
   m_ObjectHideFlags: 0
@@ -2727,6 +2732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeType: 1
+  isEmpty: 1
 --- !u!1 &1405697174
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,6 +3177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeType: 1
+  isEmpty: 1
 --- !u!1 &1625325225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3661,6 +3668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeType: 2
+  isEmpty: 1
 --- !u!1 &1738824564
 GameObject:
   m_ObjectHideFlags: 0
@@ -4105,6 +4113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   money_text: {fileID: 712981216}
   bomb_text: {fileID: 1301687705}
+  player_count_text: {fileID: 0}
 --- !u!114 &1800324064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4117,6 +4126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c2906520cbe4dc4886f34f73972048c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  secret_Button: {fileID: 0}
+  panel: {fileID: 0}
 --- !u!1 &1845467714
 GameObject:
   m_ObjectHideFlags: 0
@@ -4295,6 +4306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeType: 1
+  isEmpty: 1
 --- !u!1 &1983632234
 GameObject:
   m_ObjectHideFlags: 0
@@ -4340,6 +4352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeType: 0
+  isEmpty: 1
 --- !u!1 &1985095346
 GameObject:
   m_ObjectHideFlags: 0
@@ -6285,18 +6298,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397200916279101302, guid: 749c3feb67a91b245a77f767a4787f8f,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3182
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397200916279101302, guid: 749c3feb67a91b245a77f767a4787f8f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3182
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397200916279101302, guid: 749c3feb67a91b245a77f767a4787f8f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3182
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397200916279101302, guid: 749c3feb67a91b245a77f767a4787f8f,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7397200916279101302, guid: 749c3feb67a91b245a77f767a4787f8f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.56
+      value: 7.92
       objectReference: {fileID: 0}
     - target: {fileID: 7397200916279101302, guid: 749c3feb67a91b245a77f767a4787f8f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.690384
+      value: 6.81
       objectReference: {fileID: 0}
     - target: {fileID: 7397200916279101302, guid: 749c3feb67a91b245a77f767a4787f8f,
         type: 3}
