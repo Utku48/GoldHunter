@@ -8,6 +8,8 @@ TagManager:
   - TookLine
   - bullet
   - Enemy_Wall
+  - goldCar
+  - playerWall
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1923254937428549826
+--- !u!1 &7436926735744625478
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1295654058543135352}
-  - component: {fileID: 2762057962121770461}
-  - component: {fileID: 121661360162357527}
-  - component: {fileID: 8506748756486574407}
-  - component: {fileID: 8506748756486574400}
-  - component: {fileID: 8506748756486574401}
+  - component: {fileID: 7817850767403495932}
+  - component: {fileID: 6616155430606782041}
+  - component: {fileID: 8950263272138230419}
+  - component: {fileID: 4365143067050591473}
+  - component: {fileID: 3932655838974610719}
+  - component: {fileID: 6748979044069056294}
   m_Layer: 0
-  m_Name: stone_nuggets_coal
+  m_Name: Stone 1
   m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1295654058543135352
+--- !u!4 &7817850767403495932
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923254937428549826}
-  m_LocalRotation: {x: -0.7018502, y: -0, z: -0, w: 0.71232456}
-  m_LocalPosition: {x: -4.03, y: 0, z: 0}
+  m_GameObject: {fileID: 7436926735744625478}
+  m_LocalRotation: {x: -0.6087605, y: -0, z: -0, w: 0.79335415}
+  m_LocalPosition: {x: 7.8576946, y: 0, z: 11.113213}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -89.151, y: 0, z: 0}
---- !u!33 &2762057962121770461
+  m_LocalEulerAnglesHint: {x: -75, y: 0, z: 0}
+--- !u!33 &6616155430606782041
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923254937428549826}
-  m_Mesh: {fileID: -5683502703365757978, guid: 9a01ae444af344be19a5040fc9de5699, type: 3}
---- !u!23 &121661360162357527
+  m_GameObject: {fileID: 7436926735744625478}
+  m_Mesh: {fileID: 4421952895655807810, guid: 269ff580b83d34d488e52e7fe15a17e7, type: 3}
+--- !u!23 &8950263272138230419
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923254937428549826}
+  m_GameObject: {fileID: 7436926735744625478}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,27 +86,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &8506748756486574407
+--- !u!136 &4365143067050591473
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923254937428549826}
+  m_GameObject: {fileID: 7436926735744625478}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.0544347
-  m_Height: 2.2021935
+  m_Radius: 1.4835742
+  m_Height: 1.3596991
   m_Direction: 1
-  m_Center: {x: 0, y: 0.8365549, z: -7.791026e-10}
---- !u!54 &8506748756486574400
+  m_Center: {x: 0, y: 0.49860597, z: -0.00000007446427}
+--- !u!54 &3932655838974610719
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923254937428549826}
+  m_GameObject: {fileID: 7436926735744625478}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -116,13 +116,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &8506748756486574401
+--- !u!114 &6748979044069056294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923254937428549826}
+  m_GameObject: {fileID: 7436926735744625478}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1193ec84de7ede144a10bd7107b11927, type: 3}
@@ -130,4 +130,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPosition: {fileID: 0}
   prefabWeight: 0
-  value: 4
+  value: 5

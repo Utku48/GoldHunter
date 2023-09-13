@@ -22,7 +22,6 @@ public class HookMovement : MonoBehaviour
 
     private void Awake()
     {
-        // If there is an instance, and it's not me, delete myself.
 
         if (u != null && u != this)
         {
@@ -102,11 +101,12 @@ public class HookMovement : MonoBehaviour
             if (moveDown)
             {
                 temp -= transform.up * Time.deltaTime * move_speed;
-
+                //gameObject.GetComponent<BoxCollider>().enabled = true;
             }
             else
             {
                 temp += transform.up * Time.deltaTime * move_speed;
+                //gameObject.GetComponent<BoxCollider>().enabled = false;
             }
 
             transform.position = temp;

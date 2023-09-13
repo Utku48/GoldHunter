@@ -35,7 +35,7 @@ public class HookManager : MonoBehaviour
 
             if (hold_Obj.GetComponent<PrefabEnumController>().prefabWeight == EnumWeight.Weight.heavy)
             {
-                HookMovement.u.move_speed = 0.75f;
+                HookMovement.u.move_speed = 0.5f;
             }
 
             Transform itemTransform = hold_Obj.transform;
@@ -48,6 +48,8 @@ public class HookManager : MonoBehaviour
             HookMovement.u.moveDown = false;
 
             other.gameObject.GetComponent<PrefabEnumController>().spawnPosition.isEmpty = true;
+
+
         }
     }
 

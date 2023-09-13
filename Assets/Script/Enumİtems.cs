@@ -7,8 +7,9 @@ public class Enumİtems : MonoBehaviour
     public enum ItemPlacePositions
     {
         Gold,
-        Stone,
-        Diamond
+        ValueStone,
+        Diamond,
+        Rock
 
     }
 }

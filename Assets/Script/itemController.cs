@@ -5,8 +5,9 @@ using DG.Tweening;
 public class ItemController : MonoBehaviour
 {
     public GameObject[] diamonds;
-    public GameObject[] stones;
+    public GameObject[] value_stones;
     public GameObject[] golds;
+    public GameObject[] rock;
 
     public SpawnPosition[] spawnPoints;
 
@@ -20,11 +21,14 @@ public class ItemController : MonoBehaviour
                 case Enumİtems.ItemPlacePositions.Gold:
                     InstantiateRandomItem(golds, item);
                     break;
-                case Enumİtems.ItemPlacePositions.Stone:
-                    InstantiateRandomItem(stones, item);
+                case Enumİtems.ItemPlacePositions.ValueStone:
+                    InstantiateRandomItem(value_stones, item);
                     break;
                 case Enumİtems.ItemPlacePositions.Diamond:
                     InstantiateRandomItem(diamonds, item);
+                    break;
+                case Enumİtems.ItemPlacePositions.Rock:
+                    InstantiateRandomItem(rock, item);
                     break;
                 default:
                     break;
@@ -63,11 +67,14 @@ public class ItemController : MonoBehaviour
                     case Enumİtems.ItemPlacePositions.Gold:
                         InstantiateRandomItem(golds, item);
                         break;
-                    case Enumİtems.ItemPlacePositions.Stone:
-                        InstantiateRandomItem(stones, item);
+                    case Enumİtems.ItemPlacePositions.ValueStone:
+                        InstantiateRandomItem(value_stones, item);
                         break;
                     case Enumİtems.ItemPlacePositions.Diamond:
                         InstantiateRandomItem(diamonds, item);
+                        break;
+                    case Enumİtems.ItemPlacePositions.Rock:
+                        InstantiateRandomItem(rock, item);
                         break;
                     default:
                         break;
