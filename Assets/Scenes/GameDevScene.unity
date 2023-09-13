@@ -20,25 +20,25 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.30946895, g: 0.30946895, b: 0.30946895, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d0523d8917957bb429a32997cb0e52b2, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 16
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0.778
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.23179373, g: 0.5211265, b: 0.7779993, a: 0.778}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2300,7 +2300,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 2.51
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2344,7 +2344,7 @@ Light:
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 5000
-  m_UseColorTemperature: 1
+  m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -10327,33 +10327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9a18124bd7b4e44af62b3c09105f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diamonds:
-  - {fileID: 4743484898855212353, guid: 7f4e5ccd69f6aa9409831e8ab0063c9d, type: 3}
-  - {fileID: 4669626736042142214, guid: bc1cc899b5aac0b4e926d8d2643c12ee, type: 3}
-  - {fileID: 6871335739385688511, guid: 6d13ef7e09081d346b9cd93d33f9c689, type: 3}
-  stones:
-  - {fileID: 9181458217216261342, guid: 1ed0ae5aaac3d834484038f748cc38a7, type: 3}
-  - {fileID: 2819564877460201880, guid: 0b642859fc356b94fa10a6a8122fbfbf, type: 3}
-  - {fileID: 3516805222352502863, guid: 1a4ed1e0bb20f824d9df55559a03b20c, type: 3}
-  - {fileID: 1923254937428549826, guid: 39939fbbd2cf3d04e8e7adb751509b86, type: 3}
-  - {fileID: 4574211573607301507, guid: 4c64e69dfc7da5444bf38ddfd53d5337, type: 3}
-  - {fileID: 6861315397082441674, guid: 06a01a7dcbcbcf7419b934bda2bb1f31, type: 3}
-  - {fileID: 6804927977300112988, guid: 590f92b5ccc702d4ca7c170c682ff131, type: 3}
-  golds:
-  - {fileID: 2830050723823548425, guid: 385dab1b9301a30428fd2ab1c1a30c12, type: 3}
-  - {fileID: 2784142716110071367, guid: 842a0611d7fbc7a4fb7ef6c7110ce79b, type: 3}
-  - {fileID: 4638837660356760159, guid: faa63a1f83d0f8b46b3a24d6a664a54d, type: 3}
-  spawnPoints:
-  - {fileID: 2963049}
-  - {fileID: 1400458129}
-  - {fileID: 614656057}
-  - {fileID: 902013369}
-  - {fileID: 491487737}
-  - {fileID: 1521853241}
-  - {fileID: 1976338313}
-  - {fileID: 1983632236}
-  - {fileID: 717074584}
-  - {fileID: 1699541000}
 --- !u!4 &1800324062
 Transform:
   m_ObjectHideFlags: 0
@@ -16521,37 +16494,37 @@ PrefabInstance:
     - target: {fileID: 7766097704227864002, guid: b0df932d7bb2d71438db97351e852eeb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.755
+      value: 1.811
       objectReference: {fileID: 0}
     - target: {fileID: 7766097704227864002, guid: b0df932d7bb2d71438db97351e852eeb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.867
+      value: 6.89
       objectReference: {fileID: 0}
     - target: {fileID: 7766097704227864002, guid: b0df932d7bb2d71438db97351e852eeb,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7766097704227864002, guid: b0df932d7bb2d71438db97351e852eeb,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 1
+      value: 0.000002905726
       objectReference: {fileID: 0}
     - target: {fileID: 7766097704227864002, guid: b0df932d7bb2d71438db97351e852eeb,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7766097704227864002, guid: b0df932d7bb2d71438db97351e852eeb,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7766097704227864002, guid: b0df932d7bb2d71438db97351e852eeb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 180
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 7766097704227864002, guid: b0df932d7bb2d71438db97351e852eeb,
         type: 3}
