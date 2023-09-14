@@ -32,7 +32,7 @@ public class HookManager : MonoBehaviour
         if (other.gameObject.CompareTag("item") && !isTook)
         {
             hold_Obj = other.gameObject;
-
+            ScoreManager.year += 50;
             if (hold_Obj.GetComponent<PrefabEnumController>().prefabWeight == EnumWeight.Weight.heavy)
             {
                 HookMovement.u.move_speed = 0.5f;

@@ -3,11 +3,14 @@ using UnityEngine;
 public class PlayerClone : MonoBehaviour
 {
     public GameObject Player;
+
     public bool _instantiated2 = false;
     public bool _instantiated3 = false;
     public bool _instantiated4 = false;
     public bool _instantiated5 = false;
     public bool _instantiated6 = false;
+
+
 
 
     void Update()

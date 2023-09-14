@@ -14,7 +14,10 @@ public class EnemyHealthManager : MonoBehaviour
     {
         if (healthAmount <= 0)
         {
+            EnemyInstantiate.Instance.current_enemy.Remove(this.GetComponent<EnemyMovement>());
             Debug.Log("Enemys Died");
+            Destroy(gameObject);
+
         }
     }
     public void TakeDamage(float damage)

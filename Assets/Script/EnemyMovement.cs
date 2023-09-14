@@ -5,6 +5,11 @@ public class EnemyMovement : MonoBehaviour
     public Transform target_Point;
     public float hareketHizi = 5f;
 
+    private void Start()
+    {
+        target_Point = GameObject.Find("goldCar").transform;
+    }
+
     void Update()
     {
 
