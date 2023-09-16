@@ -15,7 +15,7 @@ public class ScoreManager : MonoBehaviour
     public static float bomb_Count;
     public static float player_Count = 1;
     public static float year = 50;
-    public static float wave_value = 50;
+    public static float wave_value = 1;
     private void Update()
     {
         money_text.text = "Gold: " + money;

@@ -10,6 +10,8 @@ TagManager:
   - Enemy_Wall
   - goldCar
   - playerWall
+  - Enemy
+  - weapon
   layers:
   - Default
   - TransparentFX

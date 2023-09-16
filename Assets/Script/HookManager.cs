@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -32,18 +33,21 @@ public class HookManager : MonoBehaviour
         if (other.gameObject.CompareTag("item") && !isTook)
         {
             hold_Obj = other.gameObject;
-            ScoreManager.year += 50;
+            hold_Obj.transform.DOKill();
+            ScoreManager.money += other.gameObject.GetComponent<PrefabEnumController>().value * 5;
+
             if (hold_Obj.GetComponent<PrefabEnumController>().prefabWeight == EnumWeight.Weight.heavy)
             {
                 HookMovement.u.move_speed = 0.5f;
             }
 
             Transform itemTransform = hold_Obj.transform;
+
             itemTransform.localRotation = hold_Obj.transform.rotation;
 
             itemTransform.SetParent(hook.transform);
-
             itemTransform.position = holdPos.position;
+
             isTook = true;
             HookMovement.u.moveDown = false;
 

@@ -12,6 +12,7 @@ public class ItemController : MonoBehaviour
     public SpawnPosition[] spawnPoints;
 
 
+
     private void Start()
     {
         foreach (var item in spawnPoints)
@@ -45,10 +46,12 @@ public class ItemController : MonoBehaviour
         {
             int randomIndex = Random.Range(0, items.Length);
             GameObject itemToSpawn = items[randomIndex];
-            GameObject instantiated_obj = Instantiate(itemToSpawn, pos.transform.position, Quaternion.Euler(-90f, 0f, 0f));
+            GameObject instantiated_obj = Instantiate(itemToSpawn, pos.transform.position, Quaternion.identity);
 
             Vector3 newScale = instantiated_obj.transform.localScale + new Vector3(0.2f, 0.2f, 0.2f);
-            instantiated_obj.transform.DOScale(newScale, 1f);
+            instantiated_obj.transform.DOScale(newScale, 2f);
+
+
             pos.isEmpty = false;
 
             instantiated_obj.GetComponent<PrefabEnumController>().spawnPosition = pos;

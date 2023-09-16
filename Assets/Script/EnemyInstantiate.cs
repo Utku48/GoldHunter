@@ -11,26 +11,16 @@ public class EnemyInstantiate : MonoBehaviour
 
     public Transform instantiatePos;
 
-    public int wave_value;
+
 
     void Start()
     {
-        for (int i = 0; i < wave_value; i++)
-        {
-            Vector3 newPosition = instantiatePos.position;
-
-            newPosition.x += i * .5f;
-
-
-            EnemyMovement e = Instantiate(_enemys[i], newPosition, Quaternion.Euler(0f, -90f, 0f)).GetComponent<EnemyMovement>();
-            current_enemy.Add(e); //oluşturulan enemyler
-        }
-
+        SpawnWave();
     }
+
     private void Awake()
     {
         // If there is an instance, and it's not me, delete myself.
-
         if (Instance != null && Instance != this)
         {
             Destroy(this);
@@ -41,6 +31,33 @@ public class EnemyInstantiate : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
 
+        CheckWaveCompletion();
+    }
 
+    void CheckWaveCompletion()
+    {
+
+        if (current_enemy.Count == 0) //düşmanların hepsi öldüyse yeni dalgayı oluştur
+        {
+            ScoreManager.wave_value++;
+            SpawnWave();
+        }
+    }
+
+    void SpawnWave()
+    {
+
+        for (int i = 0; i < ScoreManager.wave_value; i++)
+        {
+            Vector3 newPosition = instantiatePos.position;
+            newPosition.x += i * 0.5f;
+            EnemyMovement e = Instantiate(_enemys[i % _enemys.Count], newPosition, Quaternion.Euler(0f, -90f, 0f)).GetComponent<EnemyMovement>();
+            e.GetComponent<EnemyMovement>().hareketHizi = Random.Range(0.1f, 0.5f);
+            current_enemy.Add(e);
+            PlayerWallManager.inPlayerWall = false;
+        }
+    }
 }

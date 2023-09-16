@@ -12,6 +12,7 @@ public class HookMovement : MonoBehaviour
     public float move_speed = 3f;
     private float initial_Move_Speed;
 
+    public float max_X = 2.45f;
     public float min_Y = -20f;
     private float initial_Y;
     private Vector3 initial_pos;
@@ -111,7 +112,10 @@ public class HookMovement : MonoBehaviour
 
             transform.position = temp;
 
-
+            if (temp.x >= max_X)
+            {
+                moveDown = false;
+            }
             if (temp.y <= min_Y)//Maks hook high.y
             {
 

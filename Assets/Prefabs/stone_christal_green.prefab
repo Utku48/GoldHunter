@@ -130,4 +130,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPosition: {fileID: 0}
   prefabWeight: 0
-  value: 12
+  value: 22

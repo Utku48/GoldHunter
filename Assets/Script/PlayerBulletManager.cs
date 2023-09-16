@@ -7,14 +7,16 @@ using UnityEngine;
 
 public class PlayerBulletManager : MonoBehaviour
 {
- 
-    private Vector3 initialPos;
-    private Transform initial_Parent;
+    public Gun gun;
 
+    public GameObject bullet;
+    public Transform bullet_instantiate_pos;
     private void Start()
     {
-        initialPos = transform.position;
-        initial_Parent = transform.parent;
+        gun = GameObject.FindGameObjectWithTag("weapon").GetComponent<Gun>();
+
+        GameObject weapon = GameObject.FindGameObjectWithTag("weapon");
+        gun._instantiate_BulletPos = weapon.transform.Find("BulletPos");
         TweenControl();
     }
 
@@ -39,15 +41,18 @@ public class PlayerBulletManager : MonoBehaviour
             return;
         }
 
-        transform.SetParent(target.transform);
+        GameObject inst_bullet = Instantiate(bullet, gun._instantiate_BulletPos.transform);
+        inst_bullet.transform.SetParent(target.transform);
 
-        transform.DOLocalMove(Vector3.up, .5f).SetEase(Ease.Linear).OnComplete(() =>
+        inst_bullet.transform.DOLocalMove(new Vector3(0, inst_bullet.transform.localPosition.y, 0), .5f).SetEase(Ease.Linear).OnComplete(() =>
         {
-            target.GetComponent<EnemyHealthManager>().TakeDamage(10);
-            transform.SetParent(initial_Parent);
-            transform.position = initialPos;
-            DOVirtual.DelayedCall(.2f, () => TweenControl());
-        });
+            if (target.gameObject != null)
+            {
+                target.GetComponent<EnemyHealthManager>().TakeDamage(10);
+                Destroy(inst_bullet);
+            }
 
+        });
+        DOVirtual.DelayedCall(.52f, () => TweenControl());
     }
 }

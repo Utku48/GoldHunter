@@ -11,14 +11,7 @@ public class PrefabEnumController : MonoBehaviour
 
     private void Update()
     {
-        if (gameObject.transform.localScale.x <= .35f)
-        {
-            gameObject.GetComponent<CapsuleCollider>().enabled = false;
-        }
-        else
-        {
-            gameObject.GetComponent<CapsuleCollider>().enabled = true;
-        }
+
     }
 
 }
