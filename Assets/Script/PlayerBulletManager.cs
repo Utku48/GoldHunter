@@ -13,10 +13,7 @@ public class PlayerBulletManager : MonoBehaviour
     public Transform bullet_instantiate_pos;
     private void Start()
     {
-        gun = GameObject.FindGameObjectWithTag("weapon").GetComponent<Gun>();
-
-        GameObject weapon = GameObject.FindGameObjectWithTag("weapon");
-        gun._instantiate_BulletPos = weapon.transform.Find("BulletPos");
+        SetBulletPos();
         TweenControl();
     }
 
@@ -54,5 +51,16 @@ public class PlayerBulletManager : MonoBehaviour
 
         });
         DOVirtual.DelayedCall(.52f, () => TweenControl());
+    }
+    private void Update()
+    {
+        SetBulletPos();
+    }
+    public void SetBulletPos()
+    {
+        gun = GameObject.FindGameObjectWithTag("weapon").GetComponent<Gun>();
+
+        GameObject weapon = GameObject.FindGameObjectWithTag("weapon");
+        gun._instantiate_BulletPos = weapon.transform.Find("BulletPos");
     }
 }

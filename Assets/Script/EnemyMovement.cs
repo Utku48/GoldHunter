@@ -4,7 +4,6 @@ public class EnemyMovement : MonoBehaviour
 {
     public Transform target_Point;
     public float hareketHizi = 5f;
-    public Animator _anim;
 
 
     PlayerHealtManager playerHealtManager;
@@ -25,14 +24,6 @@ public class EnemyMovement : MonoBehaviour
 
         transform.position += move_direction * hareketHizi * Time.deltaTime;
 
-        if (PlayerWallManager.inPlayerWall)
-        {
-            _anim.SetBool("inPlayerWall", true);
-        }
-        else
-        {
-            _anim.SetBool("inPlayerWall", false);
-        }
     }
 
 
