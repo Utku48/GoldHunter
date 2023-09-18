@@ -21,10 +21,10 @@ public class PlayerHealtManager : MonoBehaviour
             player_alive = false;
         }
 
-        if (PlayerWallManager.inPlayerWall)
-        {
-            TakeDamage(.1f);
-        }
+        //if (PlayerWallManager.inPlayerWall)
+        //{
+        //    TakeDamage(.1f);
+        //}
 
     }
     public void TakeDamage(float damage)

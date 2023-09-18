@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class UpgradeButton : MonoBehaviour
 {
-    public GameObject[] _weapons;
-    public Transform _gunPos;
 
+    int a = 0;
     public void On_Click()
     {
-        Destroy(_weapons[0]);
-        Instantiate(_weapons[1], _gunPos);
+
+        PlayerBulletManager[] _playerBulletManagers = GameObject.FindObjectsOfType<PlayerBulletManager>();
+        a++;
+
+        foreach (var item in _playerBulletManagers)
+        {
+            item.SetGun(a);
+
+        }
     }
 
 }

@@ -102,12 +102,12 @@ public class HookMovement : MonoBehaviour
             if (moveDown)
             {
                 temp -= transform.up * Time.deltaTime * move_speed;
-                //gameObject.GetComponent<BoxCollider>().enabled = true;
+
             }
             else
             {
                 temp += transform.up * Time.deltaTime * move_speed;
-                //gameObject.GetComponent<BoxCollider>().enabled = false;
+
             }
 
             transform.position = temp;

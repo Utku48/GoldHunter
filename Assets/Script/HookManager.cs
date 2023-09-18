@@ -7,6 +7,8 @@ using UnityEngine.UIElements;
 
 public class HookManager : MonoBehaviour
 {
+    HookMovement hookMovement;
+
     [SerializeField] private GameObject hook;
     [SerializeField] private Transform holdPos;
 
@@ -28,8 +30,14 @@ public class HookManager : MonoBehaviour
             u = this;
         }
     }
+
+    private void Update()
+    {
+        
+    }
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject.CompareTag("item") && !isTook)
         {
             hold_Obj = other.gameObject;
