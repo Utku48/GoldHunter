@@ -12,7 +12,6 @@ public class EnemyInstantiate : MonoBehaviour
     public Transform instantiatePos;
 
 
-
     void Start()
     {
         SpawnWave();
@@ -54,10 +53,17 @@ public class EnemyInstantiate : MonoBehaviour
         {
             Vector3 newPosition = instantiatePos.position;
             newPosition.x += i * 0.5f;
+
             EnemyMovement e = Instantiate(_enemys[i % _enemys.Count], newPosition, Quaternion.Euler(0f, -90f, 0f)).GetComponent<EnemyMovement>();
             e.GetComponent<EnemyMovement>().hareketHizi = Random.Range(0.1f, 0.6f);
             current_enemy.Add(e);
 
+
+            EnemyAnimController.wallTouch = false;
+
         }
     }
+
+
+
 }

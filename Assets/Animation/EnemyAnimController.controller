@@ -88,7 +88,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: inPlayerWall
+    m_ConditionEvent: isFight
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 192482604739117769}
@@ -113,7 +113,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: inPlayerWall
+    m_ConditionEvent: isFight
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5441048334873785017}
@@ -121,9 +121,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.69609547
+  m_TransitionDuration: 0.23639166
   m_TransitionOffset: 0
-  m_ExitTime: 0.04554755
+  m_ExitTime: 0.045547545
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -197,7 +197,7 @@ AnimatorController:
   m_Name: EnemyAnimController
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: inPlayerWall
+  - m_Name: isFight
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -257,7 +257,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 962ddb7cbd10b6e4bb02fc3a627b71cf, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5b37b152bed0cb1418e4225e6bca705e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -350,7 +350,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: inPlayerWall
+    m_ConditionEvent: isFight
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 192482604739117769}
@@ -358,7 +358,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.49937
+  m_TransitionDuration: 0.3615702
   m_TransitionOffset: 0
   m_ExitTime: 0.16797909
   m_HasExitTime: 0
@@ -428,7 +428,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: inPlayerWall
+    m_ConditionEvent: isFight
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 9164466188096226928}
@@ -453,7 +453,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: inPlayerWall
+    m_ConditionEvent: isFight
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 192482604739117769}
@@ -478,7 +478,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: inPlayerWall
+    m_ConditionEvent: isFight
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2368435800929523388}
@@ -486,9 +486,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.5963474
-  m_TransitionOffset: 0.24244303
-  m_ExitTime: 0.05582105
+  m_TransitionDuration: 0.27196026
+  m_TransitionOffset: 0.18042788
+  m_ExitTime: 0.033933338
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
