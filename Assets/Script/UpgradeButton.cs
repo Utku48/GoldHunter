@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class UpgradeButton : MonoBehaviour
 {
+    public static int a = 0;
 
-    public int a = 0;
     public void On_Click()
     {
-        PlayerAnimController._gunValue++;
 
         PlayerBulletManager[] _playerBulletManagers = GameObject.FindObjectsOfType<PlayerBulletManager>();
         a++;
@@ -19,5 +18,6 @@ public class UpgradeButton : MonoBehaviour
 
         }
     }
+
 
 }

@@ -12,6 +12,8 @@ public class PlayerBulletManager : MonoBehaviour
     public GameObject bullet;
     public Transform _gunParent;
 
+    public GameObject _playerWall;
+
     private void Start()
     {
         TweenControl();
@@ -34,7 +36,10 @@ public class PlayerBulletManager : MonoBehaviour
 
         if (target == null)
         {
-            DOVirtual.DelayedCall(gun._fireRate, () => TweenControl());
+            if (!GetComponent<PlayerAnimController>()._knife.activeInHierarchy)
+            {
+                DOVirtual.DelayedCall(gun._fireRate, () => TweenControl());
+            }
             return;
         }
 
@@ -50,18 +55,30 @@ public class PlayerBulletManager : MonoBehaviour
             }
 
         });
-        DOVirtual.DelayedCall(gun._fireRate + 0.02f, () => TweenControl());
+
+        if (!GetComponent<PlayerAnimController>()._knife.activeInHierarchy)
+        {
+            DOVirtual.DelayedCall(gun._fireRate + 0.02f, () => TweenControl());
+        }
+
     }
 
 
     public void SetGun(int gunIndex)
     {
-        foreach (Transform item in _gunParent)// tüm _gunParent içerisindeki elemanları gezerek SetActive(false) olarak ayarla
-        {
-            item.gameObject.SetActive(false);
-        }
+        TurnOffGuns(false);
+
         _gunParent.GetChild(gunIndex).gameObject.SetActive(true);
 
         gun = _gunParent.GetChild(gunIndex).GetComponent<Gun>();
     }
+    //
+    public void TurnOffGuns(bool onOffGuns)
+    {
+        foreach (Transform item in _gunParent)
+        {
+            item.gameObject.SetActive(onOffGuns);
+        }
+    }
+
 }

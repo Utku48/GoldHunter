@@ -1,4 +1,4 @@
-﻿ using DG.Tweening;
+﻿using DG.Tweening;
 using UnityEngine;
 
 public class EnemyBulletManager : MonoBehaviour
@@ -19,23 +19,6 @@ public class EnemyBulletManager : MonoBehaviour
         TweenControl();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("playerWall"))
-        {
-            _player_health_Manager.TakeDamage(damage_value);
-
-        }
-        if (other.gameObject.CompareTag("goldCar"))
-        {
-            _car_health_Manager.TakeDamage(damage_value);
-        }
-    }
-
-    private void Update()
-    {
-        //Recursive fonskiyon nedir
-    }
 
     public void TweenControl()
     {

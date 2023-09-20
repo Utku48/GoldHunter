@@ -4,32 +4,21 @@ using UnityEngine;
 
 public class PlayerAnimController : MonoBehaviour
 {
-    private EnemyHealthManager enemyHealthManager;
+    public Animator _anim;
 
-    private Animator _anim;
-    public static int _gunValue;
     public GameObject _knife;
 
-
+    public PlayerBulletManager[] PlayerBulletManagers;
     private void Start()
     {
         _anim = GetComponent<Animator>();
-        enemyHealthManager = GetComponent<EnemyHealthManager>();
+
     }
 
     private void Update()
     {
 
         GunAnimations();
-
-        if (EnemyAnimController.wallTouch)
-        {
-            KnifeAnimation();
-        }
-        else
-        {
-            KnifeAnimationStop();
-        }
     }
 
     private void GunAnimations()
@@ -40,7 +29,7 @@ public class PlayerAnimController : MonoBehaviour
         _anim.SetBool("isUzi", false);
         _anim.SetBool("isAk", false);
 
-        switch (_gunValue)
+        switch (UpgradeButton.a)
         {
             case 1:
                 _anim.SetBool("isPistol", true);
@@ -57,15 +46,17 @@ public class PlayerAnimController : MonoBehaviour
         }
     }
 
-    private void KnifeAnimation()
+    public void KnifeAnimation()
     {
+        GetComponent<PlayerBulletManager>().TurnOffGuns(false);
         _anim.SetBool("isKnife", true);
         _knife.SetActive(true);
-        enemyHealthManager.TakeDamage(40f);
+
     }
 
-    private void KnifeAnimationStop()
+    public void KnifeAnimationStop()
     {
+        GetComponent<PlayerBulletManager>().SetGun(UpgradeButton.a);
         _anim.SetBool("isKnife", false);
         _knife.SetActive(false);
     }

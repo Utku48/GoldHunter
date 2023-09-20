@@ -3552,6 +3552,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2054342832}
   healthAmount: 100
+  _playerWall: {fileID: 1814055666}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1814055666
 GameObject:
   m_ObjectHideFlags: 0
@@ -3578,8 +3582,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814055666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.313, y: 2.562, z: 6.859}
-  m_LocalScale: {x: 0.028833596, y: 1, z: 1}
+  m_LocalPosition: {x: -0.145, y: 2.713, z: 6.859}
+  m_LocalScale: {x: 0.07949999, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3612,8 +3616,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.26670212, y: 0.94650936, z: 1.3973136}
-  m_Center: {x: 0.3788489, y: 0.32520938, z: 0.07282567}
+  m_Size: {x: 2.4385886, y: 0.94650936, z: 1.3973136}
+  m_Center: {x: 0.3106293, y: 0.32520938, z: 0.07282567}
 --- !u!1 &1836948560
 GameObject:
   m_ObjectHideFlags: 0
@@ -8608,6 +8612,7 @@ MonoBehaviour:
   gun: {fileID: 279369084}
   bullet: {fileID: 129119587183599488, guid: d6d216d66f6607d46a68f7aa08521708, type: 3}
   _gunParent: {fileID: 1836948561}
+  _playerWall: {fileID: 1814055666}
 --- !u!114 &8739273118883530287
 MonoBehaviour:
   m_ObjectHideFlags: 0

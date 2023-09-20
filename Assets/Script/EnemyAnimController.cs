@@ -8,11 +8,13 @@ public class EnemyAnimController : MonoBehaviour
     public Animator _Eanim;
     private float speed;
 
+    public float _knifeDamage = 10f;
+
     public static bool wallTouch = false;
     private void Start()
     {
         speed = GetComponent<EnemyMovement>().hareketHizi;
-        Debug.Log(speed);
+
         if (speed > 0.1f && speed <= 0.3f)
         {
 
@@ -39,8 +41,17 @@ public class EnemyAnimController : MonoBehaviour
         if (other.gameObject.CompareTag("playerWall"))
         {
             wallTouch = true;
-            GetComponent<EnemyMovement>().hareketHizi = 0f;
             _Eanim.SetBool("isFight", true);
+            GetComponent<EnemyMovement>().hareketHizi = 0f;
+
+            PlayerAnimController[] playerAnimControllers = GameObject.FindObjectsOfType<PlayerAnimController>();
+            
+
+            foreach (var anim in playerAnimControllers)
+            {
+                anim.KnifeAnimation();
+         
+            }
 
         }
     }
