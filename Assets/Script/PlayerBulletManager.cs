@@ -23,7 +23,7 @@ public class PlayerBulletManager : MonoBehaviour
     {
 
         EnemyMovement target = null;
-        float distance = 999f;
+        float distance = 3.5f;
 
         foreach (var item in EnemyInstantiate.Instance.current_enemy) //üzerimize koşan enemy'leri gez
         {

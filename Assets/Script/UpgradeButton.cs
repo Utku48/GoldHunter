@@ -8,14 +8,25 @@ public class UpgradeButton : MonoBehaviour
 
     public void On_Click()
     {
+        if (a == 4)
+        {
+            Debug.Log("Silah Ekleyiniz");
+            return;
+        }
 
         PlayerBulletManager[] _playerBulletManagers = GameObject.FindObjectsOfType<PlayerBulletManager>();
         a++;
-
-        foreach (var item in _playerBulletManagers)
+        if (a < 4)
         {
-            item.SetGun(a);
+            foreach (var item in _playerBulletManagers)
+            {
+                if (!item.GetComponent<PlayerAnimController>()._knife.activeInHierarchy)
+                {
+                    item.SetGun(a);
+                }
 
+
+            }
         }
     }
 

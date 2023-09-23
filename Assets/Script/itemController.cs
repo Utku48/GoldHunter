@@ -49,7 +49,7 @@ public class ItemController : MonoBehaviour
             GameObject instantiated_obj = Instantiate(itemToSpawn, pos.transform.position, Quaternion.identity);
 
             Vector3 newScale = instantiated_obj.transform.localScale + new Vector3(0.2f, 0.2f, 0.2f);
-            instantiated_obj.transform.DOScale(newScale, 2f);
+            instantiated_obj.transform.DOScale(newScale, 1f);
 
 
             pos.isEmpty = false;
