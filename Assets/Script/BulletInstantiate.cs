@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletInstantiate : MonoBehaviour
 {
+    
     public GameObject bullet;
     public Transform bullet_instantiate_pos;
 
